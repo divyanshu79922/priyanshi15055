@@ -1,0 +1,1029 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RP Group & Hotels Industry</title>
+<meta name="description" content="RP Group & Hotels Industry - Hotels, Properties, Travel and more.">
+<style>
+:root{
+  --green:#063f32;
+  --green2:#0b5a48;
+  --green3:#042f27;
+  --gold:#d7b257;
+  --gold2:#f1d991;
+  --cream:#fbf8ef;
+  --cream2:#f2ead5;
+  --white:#ffffff;
+  --ink:#183b33;
+  --muted:#65716b;
+  --line:#e1d3aa;
+  --shadow:0 16px 45px rgba(0,40,30,.15);
+  --radius:16px;
+  --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.45}
+body.modal-open{overflow:hidden}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+img{display:block;width:100%}
+.container{width:min(var(--max),94%);margin:auto}
+.section{padding:42px 0}
+.hide{display:none!important}
+
+/* Header + logo */
+header{
+  position:sticky;top:0;z-index:100;
+  background:var(--green3);color:#fff;border-bottom:1px solid var(--gold);
+}
+.navbar{min-height:70px;display:flex;align-items:center;gap:18px}
+.logo{display:flex;align-items:center;gap:9px;min-width:235px}
+.logo-mark{width:56px;height:49px;flex:0 0 auto}
+.logo-text{line-height:1.02}
+.logo-text b{display:block;color:var(--gold2);font-size:15px;letter-spacing:.45px}
+.logo-text span{display:block;color:#fff;font-size:8px;font-weight:700;letter-spacing:1.25px;margin-top:4px}
+.nav{display:flex;align-items:center;justify-content:center;gap:18px;flex:1}
+.nav a{font-size:11px;padding:26px 0 18px;border-bottom:2px solid transparent;white-space:nowrap}
+.nav a:hover,.nav a.active{color:var(--gold2);border-bottom-color:var(--gold)}
+.header-actions{display:flex;align-items:center;gap:7px}
+.header-actions button{
+  background:transparent;color:#fff;border:1px solid var(--gold);
+  border-radius:26px;padding:8px 11px;font-size:10px
+}
+.header-actions .search-mini{border:0;color:var(--gold2);font-size:20px}
+.mobile-toggle{
+  display:none;margin-left:auto;border:1px solid var(--gold);
+  color:var(--gold2);background:transparent;border-radius:8px;padding:4px 9px;font-size:21px
+}
+.mobile-nav{display:none;background:var(--green3);border-top:1px solid rgba(215,178,87,.35)}
+.mobile-nav a{display:block;padding:11px 3%;border-bottom:1px solid rgba(215,178,87,.13);font-size:12px}
+
+/* Hero */
+.hero{
+  position:relative;min-height:405px;overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(251,248,239,.98) 0%,rgba(251,248,239,.92) 33%,rgba(251,248,239,.20) 63%,rgba(251,248,239,0) 100%),
+    url("https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1800&q=88") center/cover;
+}
+.hero-content{position:relative;z-index:2;padding:35px 0 26px}
+.eyebrow{font-size:10px;font-weight:800;letter-spacing:1.5px;color:var(--green2);text-transform:uppercase}
+.hero h1{font-family:Georgia,"Times New Roman",serif;color:var(--green);font-size:54px;line-height:.96;margin-top:7px;max-width:700px}
+.hero-sub{font-size:15px;margin-top:13px}
+.hero-mini{font-size:11px;color:#59645f}
+
+/* Search */
+.search-shell{
+  width:min(100%,930px);margin-top:23px;background:rgba(255,255,255,.97);
+  border:1px solid var(--gold);border-radius:16px;box-shadow:0 19px 45px rgba(0,0,0,.18);overflow:hidden
+}
+.search-tabs{display:flex;overflow:auto}
+.search-tab{
+  flex:1;min-width:108px;border:0;border-right:1px solid #e8e0cc;background:#fff;
+  color:var(--ink);padding:11px 13px;font-size:11px;font-weight:800
+}
+.search-tab.active{background:var(--green);color:#fff}
+.search-form{display:grid;grid-template-columns:1.45fr .9fr .9fr 1.15fr .82fr;gap:8px;padding:9px}
+.search-field{min-height:44px;border:1px solid #e5decc;border-radius:10px;display:flex;align-items:center;gap:8px;padding:0 10px}
+.search-field span{color:var(--green);font-size:11px;font-weight:800}
+.search-field input{width:100%;border:0;outline:0;background:transparent;font-size:10px;color:var(--ink)}
+.search-submit{
+  border:1px solid var(--gold);border-radius:10px;background:var(--green);
+  color:var(--gold2);font-size:11px;font-weight:800
+}
+.search-note{font-size:9px;color:#7b6a48;padding:0 11px 10px}
+.search-result-box{padding:0 11px 12px;font-size:10px;color:var(--green);display:none}
+
+/* Benefits */
+.benefits{background:#fff;border-bottom:1px solid #eee6d5}
+.benefits-grid{display:grid;grid-template-columns:repeat(5,1fr)}
+.benefit{padding:10px 17px;min-height:67px;display:grid;grid-template-columns:34px 1fr;align-content:center;border-right:1px solid #ece7d9}
+.benefit:last-child{border-right:0}
+.benefit .sym{grid-row:1/3;color:var(--gold);font-size:23px}
+.benefit b{font-size:10px}.benefit small{font-size:9px;color:#67726c}
+
+/* Common headings */
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:17px}
+.section-head h2,.dest-heading h2,.services-copy h2,.owner-copy h2,.about h2{
+  font-family:Georgia,"Times New Roman",serif;color:var(--green);font-size:35px;line-height:1
+}
+.section-head .link-btn{border:0;background:none;color:var(--green);font-size:10px;font-weight:800}
+
+/* Cards */
+.property-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.property-card{
+  background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  box-shadow:0 6px 19px rgba(7,63,50,.07);transition:.23s;cursor:pointer
+}
+.property-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card-img{height:150px;background-size:cover;background-position:center;position:relative}
+.badge{position:absolute;right:8px;top:8px;padding:5px 9px;border-radius:18px;background:var(--green);color:#fff;border:1px solid var(--gold);font-size:9px;font-weight:700}
+.card-body{padding:10px}
+.card-body h3{font-size:15px;color:var(--green)}
+.card-body .loc{font-size:9px;color:#56625b;margin:3px 0 8px}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:5px;font-size:8px;color:#46564f}
+.price-row{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.price-row strong{font-size:14px;color:var(--green)}
+.arrow{
+  width:28px;height:28px;border-radius:50%;display:grid;place-items:center;
+  background:var(--green);color:var(--gold2);font-size:13px;font-weight:900
+}
+
+/* Destinations */
+.destinations{
+  color:#fff;
+  background:
+    linear-gradient(rgba(6,63,50,.95),rgba(6,63,50,.95)),
+    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=86") center/cover;
+}
+.dest-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:18px}
+.dest-heading .eyebrow{color:var(--gold2)}
+.dest-heading h2{color:var(--gold2)}
+.dest-heading p{max-width:410px;font-size:10px}
+.destination-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:9px}
+.destination-card{border:1px solid var(--gold);border-radius:11px;overflow:hidden;background:rgba(255,255,255,.05);position:relative;cursor:pointer;transition:.2s}
+.destination-card:hover{transform:translateY(-3px);background:rgba(255,255,255,.11)}
+.destination-img{height:112px;background-size:cover;background-position:center}
+.destination-body{padding:7px 8px 10px}
+.destination-body h3{font-family:Georgia,"Times New Roman",serif;color:var(--gold2);font-size:19px}
+.destination-body p,.destination-body small{display:block;font-size:8px}
+.destination-card .arrow{position:absolute;right:7px;bottom:7px;width:22px;height:22px;background:#fff;color:var(--green);font-size:11px}
+
+/* Services */
+.services-wrap{display:grid;grid-template-columns:.85fr 1.5fr;gap:30px;align-items:center}
+.services-copy .desc{font-size:11px;color:#56635c;margin:9px 0 15px;max-width:430px}
+.primary-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:var(--green);color:var(--gold2);border:1px solid var(--gold);
+  border-radius:25px;padding:10px 16px;font-size:10px;font-weight:800
+}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.service-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;align-items:center;gap:10px;min-height:78px;cursor:pointer;transition:.2s}
+.service-card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.service-icon{flex:0 0 38px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--green);font-size:13px;font-weight:900}
+.service-card h3{font-size:11px}.service-card p{font-size:8px;color:#68736d;margin-top:2px}
+
+/* Dealer / Owner */
+.two-col{display:grid;grid-template-columns:1.25fr 1fr;gap:12px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:15px;padding:14px}
+.panel-top{display:flex;justify-content:space-between;align-items:start;gap:12px;margin-bottom:10px}
+.panel-top h2{font-family:Georgia,"Times New Roman",serif;color:var(--green);font-size:24px}
+.panel-top p{font-size:9px}
+.panel-top button{border:0;background:none;color:var(--green);font-size:9px;font-weight:800}
+.dealer-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.dealer{border:1px solid #e8e3d6;border-radius:10px;padding:7px}
+.dealer-row{display:grid;grid-template-columns:31px 1fr auto;gap:6px;align-items:center}
+.avatar{width:31px;height:31px;border-radius:50%;background:var(--green);color:var(--gold2);display:grid;place-items:center;font-size:8px;font-weight:900}
+.dealer-name{font-size:9px;font-weight:800}.dealer-place{font-size:8px;color:#657069}
+.verified{font-size:7px;color:#2b6a4e;background:#e9f4eb;border-radius:14px;padding:3px 5px}
+.dealer-phone{font-size:8px;color:#516159;margin-top:4px}
+.owner-panel{
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.98),rgba(255,255,255,.68)),
+    url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1100&q=85") center/cover;
+}
+.owner-content{display:grid;grid-template-columns:1fr 155px;gap:10px;align-items:center}
+.owner-copy ul{list-style:none;margin:11px 0 12px}
+.owner-copy li{font-size:9px;margin:6px 0}
+.owner-copy li:before{content:"OK";display:inline-grid;place-items:center;min-width:18px;height:18px;border-radius:50%;margin-right:6px;background:var(--green);color:var(--gold2);font-size:7px}
+.owner-photo{background:#fff;border:1px solid var(--gold);border-radius:12px;overflow:hidden}
+.owner-photo .pic{height:124px;background:url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=600&q=85") center/cover}
+.owner-photo .cap{padding:7px;font-size:8px}.owner-photo .cap b{display:block;font-size:10px}
+
+/* Booking */
+.booking-section{background:var(--cream2);padding:42px 0}
+.booking-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.booking-tile{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px}
+.booking-tile .ico{font-size:22px;color:var(--gold)}
+.booking-tile h3{font-size:13px;margin:7px 0 3px}.booking-tile p{font-size:9px;color:#5b6861}
+.booking-tile button{border:0;background:none;color:var(--green);font-weight:800;font-size:9px;margin-top:7px}
+.enquiry{margin-top:14px;background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px}
+.form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.field{margin-bottom:9px}.field label{display:block;font-size:9px;font-weight:800;margin-bottom:4px}
+.field input,.field select,.field textarea{width:100%;border:1px solid #ddd4bb;border-radius:9px;padding:9px;background:#fff;outline:0;font-size:10px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green)}
+.full{grid-column:1/-1}
+.form-actions{display:flex;gap:8px;flex-wrap:wrap}
+.success{display:none;margin-top:10px;padding:10px;border-radius:9px;background:#e9f7ec;border:1px solid #b2d8b8;color:#245d33;font-size:9px}
+
+/* About */
+.about-box{background:#fff;border:1px solid var(--line);border-radius:15px;padding:22px;display:grid;grid-template-columns:1fr 1.25fr;gap:28px}
+.about-box p{font-size:11px;color:#5d6862}
+
+/* Footer */
+footer{background:var(--green3);color:#fff;border-top:1px solid var(--gold);padding:30px 0 12px}
+.footer-grid{display:grid;grid-template-columns:1.35fr .7fr .7fr .9fr 1.35fr;gap:20px}
+footer h4{font-family:Georgia,"Times New Roman",serif;color:var(--gold2);font-size:18px;margin-bottom:6px}
+footer a,footer p{display:block;color:#fff;font-size:8px;margin:5px 0}
+.socials{display:flex!important;gap:6px}.socials a{width:26px;height:26px;border:1px solid var(--gold);border-radius:50%;display:grid!important;place-items:center}
+.footer-bottom{border-top:1px solid rgba(215,178,87,.32);margin-top:19px;padding-top:9px;display:flex;justify-content:space-between;gap:10px;color:var(--gold2);font-size:8px}
+
+/* Modals */
+.modal{position:fixed;inset:0;z-index:500;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(1,31,24,.74)}
+.modal.show{display:flex}
+.modal-box{width:min(790px,100%);max-height:90vh;overflow:auto;background:var(--cream);border:1px solid var(--gold);border-radius:17px;box-shadow:0 26px 70px rgba(0,0,0,.32)}
+.modal-head{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;background:var(--green3);padding:13px 15px;border-bottom:1px solid var(--gold)}
+.modal-head h3{font-family:Georgia,"Times New Roman",serif;color:var(--gold2);font-size:21px}
+.close{border:0;background:transparent;color:#fff;font-size:25px;padding:0 2px}
+.modal-body{padding:16px}
+.detail-layout{display:grid;grid-template-columns:1.05fr 1fr;gap:16px}
+.detail-img{height:270px;border-radius:12px;background-size:cover;background-position:center}
+.detail-body h4{font-family:Georgia,"Times New Roman",serif;font-size:28px;color:var(--green)}
+.detail-meta{font-size:10px;color:#5d6a63;margin:4px 0 11px}
+.detail-specs{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.detail-specs div{background:#fff;border:1px solid #e6ddc6;border-radius:8px;padding:7px;font-size:9px}
+.detail-price{font-size:20px;color:var(--green);font-weight:900;margin:12px 0}
+.detail-desc{font-size:10px;color:#56645d;margin-bottom:12px}
+.modal-actions{display:flex;gap:7px;flex-wrap:wrap}
+.modal-actions button{border:1px solid var(--gold);border-radius:22px;padding:9px 12px;font-size:10px;font-weight:800}
+.btn-green{background:var(--green);color:var(--gold2)}
+.btn-light{background:#fff;color:var(--green)}
+.simple-form{display:grid;gap:9px}
+.simple-form input,.simple-form select{width:100%;padding:10px;border:1px solid var(--line);border-radius:9px;background:#fff;font-size:10px}
+.simple-form button{padding:10px;border:1px solid var(--gold);border-radius:22px;background:var(--green);color:var(--gold2);font-weight:800;font-size:10px}
+.option-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.option{padding:14px;background:#fff;border:1px solid var(--line);border-radius:11px;cursor:pointer}
+.option:hover{border-color:var(--green)}
+.dashboard-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dashboard-card{padding:14px;background:#fff;border:1px solid var(--line);border-radius:11px}
+.dashboard-card b{display:block;color:var(--green);font-size:12px}.dashboard-card span{display:block;font-size:9px;color:#66726b;margin-top:3px}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px;margin-bottom:7px}
+.faq-item button{width:100%;border:0;background:none;text-align:left;font-weight:800;font-size:10px;color:var(--green)}
+.faq-answer{display:none;font-size:9px;color:#5f6b64;margin-top:6px}
+.faq-item.open .faq-answer{display:block}
+.language-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.language-btn{border:1px solid var(--line);background:#fff;border-radius:11px;padding:16px;font-weight:800;color:var(--green)}
+.language-btn.active{background:var(--green);color:var(--gold2);border-color:var(--gold)}
+
+/* Responsive */
+@media(max-width:1100px){
+  .nav{gap:12px}.nav a{font-size:9px}
+  .property-grid{grid-template-columns:repeat(2,1fr)}
+  .destination-grid{grid-template-columns:repeat(4,1fr)}
+}
+@media(max-width:860px){
+  .nav,.header-actions{display:none}.mobile-toggle{display:block}
+  .mobile-nav.show{display:block}
+  .hero{min-height:520px}.hero h1{font-size:44px}
+  .search-form{grid-template-columns:1fr 1fr}
+  .benefits-grid{grid-template-columns:1fr 1fr}
+  .benefit:last-child{grid-column:1/-1;border-right:0}
+  .services-wrap,.two-col,.about-box{grid-template-columns:1fr}
+  .service-grid{grid-template-columns:repeat(2,1fr)}
+  .booking-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:580px){
+  .logo{min-width:auto}.logo-text b{font-size:12px}.logo-text span{font-size:7px}
+  .hero{min-height:680px}.hero h1{font-size:36px}
+  .search-form{grid-template-columns:1fr}
+  .benefits-grid{grid-template-columns:1fr}
+  .benefit:last-child{grid-column:auto}
+  .property-grid,.destination-grid,.service-grid,.booking-grid{grid-template-columns:1fr}
+  .destination-img{height:165px}
+  .owner-content,.detail-layout{grid-template-columns:1fr}
+  .detail-img{height:215px}
+  .form-grid{grid-template-columns:1fr}.full{grid-column:auto}
+  .footer-grid{grid-template-columns:1fr}.footer-bottom{display:block;line-height:1.8}
+}
+
+/* Print / file-opening friendly */
+@media print{
+  header,.modal,.mobile-nav{display:none!important}
+  .hero{min-height:300px}
+}
+</style>
+</head>
+<body>
+
+<header id="home">
+  <div class="container navbar">
+    <a class="logo" href="#home">
+      <!-- Unique RP logo: roof + monogram -->
+      <svg class="logo-mark" viewBox="0 0 120 100" aria-label="RP logo">
+        <path d="M10 42 L60 7 L110 42" fill="none" stroke="#d7b257" stroke-width="6" stroke-linecap="round"/>
+        <path d="M25 42 V80 H95 V42" fill="none" stroke="#d7b257" stroke-width="5"/>
+        <path d="M37 72 V38 H53 C63 38 67 44 67 51 C67 58 63 63 53 63 H45 M68 72 L57 56" fill="none" stroke="#f1d991" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M72 38 H86 C95 38 98 43 98 49 C98 56 94 60 86 60 H79 V72" fill="none" stroke="#f1d991" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="logo-text">
+        <b>RP GROUP &amp;</b>
+        <b>HOTELS INDUSTRY</b>
+        <span>STAYS | PROPERTIES | TRAVEL</span>
+      </span>
+    </a>
+
+    <nav class="nav">
+      <a class="active" href="#home">Home</a>
+      <a href="#properties">Hotels</a>
+      <a href="#properties">Properties</a>
+      <a href="#services">Travel</a>
+      <a href="#properties">Rent / Buy / Sell</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="search-mini" id="topSearch" title="Search">SEARCH</button>
+      <button data-modal="loginModal">Login / Sign Up</button>
+      <button data-modal="languageModal">EN | HI</button>
+    </div>
+
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">MENU</button>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#home">Home</a>
+    <a href="#properties">Hotels</a>
+    <a href="#properties">Properties</a>
+    <a href="#services">Travel</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+    <a href="#booking">Bookings</a>
+    <a href="#footer">Footer</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-content">
+    <div class="eyebrow">WELCOME TO RP GROUP &amp; HOTELS INDUSTRY</div>
+    <h1>Find Your Perfect Stay,<br>Plan Your Next Journey</h1>
+    <p class="hero-sub">Hotels, Properties, Travel &amp; More - All in One Place.</p>
+    <p class="hero-mini">Book | Explore | Live the Experience</p>
+
+    <div class="search-shell" id="searchShell">
+      <div class="search-tabs">
+        <button class="search-tab active" data-type="hotel">Hotels</button>
+        <button class="search-tab" data-type="property">Properties</button>
+        <button class="search-tab" data-type="bus">Bus</button>
+        <button class="search-tab" data-type="flight">Flight</button>
+        <button class="search-tab" data-type="train">Train</button>
+      </div>
+
+      <form class="search-form" id="searchForm">
+        <div class="search-field">
+          <span>GO</span>
+          <input id="searchDestination" type="text" placeholder="Where do you want to go?">
+        </div>
+        <div class="search-field">
+          <span>IN</span>
+          <input id="checkIn" type="date">
+        </div>
+        <div class="search-field">
+          <span>OUT</span>
+          <input id="checkOut" type="date">
+        </div>
+        <div class="search-field">
+          <span>GUEST</span>
+          <input id="guestCount" type="text" placeholder="2 Guests, 1 Room">
+        </div>
+        <button class="search-submit" type="submit">SEARCH</button>
+      </form>
+
+      <div class="search-note">Try: Goa, Manali, Mumbai, Dehradun, Kashmir, Kerala or Rajasthan.</div>
+      <div class="search-result-box" id="searchResult"></div>
+    </div>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="container benefits-grid">
+    <div class="benefit"><span class="sym">P</span><b>Best Price</b><small>Guarantee</small></div>
+    <div class="benefit"><span class="sym">V</span><b>Verified Properties</b><small>and Hotels</small></div>
+    <div class="benefit"><span class="sym">B</span><b>Easy Booking</b><small>Process</small></div>
+    <div class="benefit"><span class="sym">24</span><b>24/7 Customer</b><small>Support</small></div>
+    <div class="benefit"><span class="sym">S</span><b>Safe &amp; Secure</b><small>Payments</small></div>
+  </div>
+</section>
+
+<section class="section" id="properties">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">FEATURED PROPERTIES</div>
+        <h2>Handpicked Stays &amp; Properties</h2>
+      </div>
+      <button class="link-btn" id="viewAllProperties">View All Properties -&gt;</button>
+    </div>
+
+    <div class="property-grid" id="propertyGrid"></div>
+  </div>
+</section>
+
+<section class="destinations section">
+  <div class="container">
+    <div class="dest-heading">
+      <div>
+        <div class="eyebrow">EXPLORE POPULAR CITIES</div>
+        <h2>Top Destinations for Your Next Trip</h2>
+      </div>
+      <p>From mountains to beaches, discover beautiful Indian destinations with hotels, properties and travel options - all in one place.</p>
+    </div>
+    <div class="destination-grid" id="destinationGrid"></div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="container services-wrap">
+    <div class="services-copy">
+      <div class="eyebrow">OUR SERVICES</div>
+      <h2>More Than Just Stays</h2>
+      <p class="desc">We bring you a complete travel and property solution under one roof. Explore hotels, homes, travel tickets, owner tools and more.</p>
+      <button class="primary-btn" id="allServicesBtn">Explore All Services -&gt;</button>
+    </div>
+    <div class="service-grid" id="serviceGrid"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container two-col">
+    <div class="panel" id="dealers">
+      <div class="panel-top">
+        <div>
+          <h2>Our Dealers</h2>
+          <p>Trusted Partners, Better Reach</p>
+        </div>
+        <button id="allDealersBtn">View All Dealers -&gt;</button>
+      </div>
+      <div class="dealer-grid" id="dealerGrid"></div>
+    </div>
+
+    <div class="panel owner-panel" id="owner">
+      <div class="owner-content">
+        <div class="owner-copy">
+          <div class="eyebrow">OWNER</div>
+          <h2>Manage Your Properties,<br>Grow Your Business</h2>
+          <ul>
+            <li>Add &amp; List Properties</li>
+            <li>Manage Property Details &amp; Photos</li>
+            <li>Edit / Update / Delete Listings</li>
+            <li>Receive Enquiries &amp; Bookings</li>
+          </ul>
+          <button class="primary-btn" id="ownerDashboardBtn">Go to Owner Dashboard -&gt;</button>
+        </div>
+        <div class="owner-photo">
+          <div class="pic"></div>
+          <div class="cap"><b>OWNER</b>Co-Founder</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="booking-section" id="booking">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">BOOKING CENTRE</div>
+        <h2>Plan &amp; Book Your Journey</h2>
+      </div>
+    </div>
+
+    <div class="booking-grid">
+      <div class="booking-tile"><div class="ico">HOTEL</div><h3>Hotel Booking</h3><p>Stay in hotels, resorts, villas and cottages.</p><button data-booking="Hotel Booking">Book Now -&gt;</button></div>
+      <div class="booking-tile"><div class="ico">BUS</div><h3>Bus Booking</h3><p>Pan-India bus travel enquiry and booking.</p><button data-booking="Bus Booking">Book Now -&gt;</button></div>
+      <div class="booking-tile"><div class="ico">AIR</div><h3>Air Ticket</h3><p>Domestic and travel enquiry service.</p><button data-booking="Air Ticket">Book Now -&gt;</button></div>
+      <div class="booking-tile"><div class="ico">TRAIN</div><h3>Railway Ticket</h3><p>Train journey enquiry and booking.</p><button data-booking="Railway Ticket">Book Now -&gt;</button></div>
+    </div>
+
+    <form class="enquiry" id="bookingForm">
+      <div class="section-head" style="margin-bottom:10px">
+        <div>
+          <div class="eyebrow">QUICK ENQUIRY</div>
+          <h2>Send Your Booking Request</h2>
+        </div>
+      </div>
+      <div class="form-grid">
+        <div class="field"><label>Full Name<input required name="name" type="text" placeholder="Your name"></label></div>
+        <div class="field"><label>Mobile Number<input required name="phone" type="tel" placeholder="+91"></label></div>
+        <div class="field"><label>Email<input required name="email" type="email" placeholder="you@example.com"></label></div>
+        <div class="field"><label>Service<select id="bookingService" name="service">
+          <option>Hotel Booking</option><option>Property Buying</option><option>Property Renting</option>
+          <option>Bus Booking</option><option>Air Ticket</option><option>Railway Ticket</option>
+        </select></label></div>
+        <div class="field"><label>Destination<input name="destination" type="text" placeholder="City / Location"></label></div>
+        <div class="field"><label>Travel Date<input name="date" type="date"></label></div>
+        <div class="field full"><label>Message<textarea name="message" rows="4" placeholder="Tell us what you are looking for..."></textarea></label></div>
+      </div>
+      <div class="form-actions">
+        <button class="primary-btn" type="submit">Submit Request -&gt;</button>
+        <button class="primary-btn" type="button" id="whatsappBtn" style="background:#1d6d4f">Send on WhatsApp</button>
+      </div>
+      <div class="success" id="bookingSuccess">Request captured successfully in this browser. For real bookings, connect this form to your backend or booking API.</div>
+    </form>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container about-box">
+    <div>
+      <div class="eyebrow">ABOUT RP GROUP</div>
+      <h2>One Platform for Stays, Properties &amp; Travel</h2>
+    </div>
+    <p>RP Group &amp; Hotels Industry brings hotels, properties and travel services together in one elegant platform. Explore destinations, discover properties, view full details, enquire with dealers and plan your next journey from one place.</p>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="container footer-grid">
+    <div>
+      <a class="logo" href="#home">
+        <svg class="logo-mark" viewBox="0 0 120 100" aria-hidden="true">
+          <path d="M10 42 L60 7 L110 42" fill="none" stroke="#d7b257" stroke-width="6" stroke-linecap="round"/>
+          <path d="M25 42 V80 H95 V42" fill="none" stroke="#d7b257" stroke-width="5"/>
+          <path d="M37 72 V38 H53 C63 38 67 44 67 51 C67 58 63 63 53 63 H45 M68 72 L57 56" fill="none" stroke="#f1d991" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M72 38 H86 C95 38 98 43 98 49 C98 56 94 60 86 60 H79 V72" fill="none" stroke="#f1d991" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo-text"><b>RP GROUP &amp;</b><b>HOTELS INDUSTRY</b><span>STAYS | PROPERTIES | TRAVEL</span></span>
+      </a>
+      <p>Your Dream. Our Priority.</p>
+    </div>
+    <div><h4>Quick Links</h4><a href="#home">Home</a><a href="#properties">Hotels</a><a href="#properties">Properties</a></div>
+    <div><h4>Company</h4><a href="#services">Travel</a><a href="#about">About Us</a><a href="#contact">Contact</a></div>
+    <div><h4>Follow Us</h4><div class="socials"><a href="#" onclick="return false">FB</a><a href="#" onclick="return false">IG</a><a href="#" onclick="return false">YT</a><a href="#" onclick="return false">IN</a><a href="#" onclick="return false">X</a></div></div>
+    <div><h4>Contact Us</h4><a href="tel:+919876543210">Phone: +91 98764 76565</a><a href="mailto:rpgroupandhotelindustry@gmail.com">Email: rpgroupandhotelindustry@gmail.com</a><p>Lucknow, Uttar Pradesh, India</p></div>
+  </div>
+  <div class="container footer-bottom">
+    <span>Copyright 2025 RP Group &amp; Hotels Industry. All Rights Reserved.</span>
+    <span><a href="#" data-modal="privacyModal">Privacy</a> | <a href="#" data-modal="termsModal">Terms</a> | <a href="#" data-modal="faqModal">FAQ</a></span>
+  </div>
+</footer>
+
+<!-- Generic modal -->
+<div class="modal" id="genericModal">
+  <div class="modal-box">
+    <div class="modal-head"><h3 id="genericTitle">Details</h3><button class="close" data-close="genericModal">X</button></div>
+    <div class="modal-body" id="genericBody"></div>
+  </div>
+</div>
+
+<!-- Property detail modal -->
+<div class="modal" id="detailModal">
+  <div class="modal-box">
+    <div class="modal-head"><h3>Property Details</h3><button class="close" data-close="detailModal">X</button></div>
+    <div class="modal-body" id="detailBody"></div>
+  </div>
+</div>
+
+<!-- Login -->
+<div class="modal" id="loginModal">
+  <div class="modal-box">
+    <div class="modal-head"><h3>Login / Sign Up</h3><button class="close" data-close="loginModal">X</button></div>
+    <div class="modal-body">
+      <form class="simple-form" id="loginForm">
+        <input required type="email" placeholder="Email address">
+        <input required type="password" placeholder="Password">
+        <select><option>Customer</option><option>Dealer</option><option>Owner</option></select>
+        <button type="submit">Continue</button>
+      </form>
+      <div class="success" id="loginSuccess">Demo login form submitted. Connect this to a real authentication backend for secure accounts.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Language -->
+<div class="modal" id="languageModal">
+  <div class="modal-box">
+    <div class="modal-head"><h3>Choose Language</h3><button class="close" data-close="languageModal">X</button></div>
+    <div class="modal-body">
+      <div class="language-grid">
+        <button class="language-btn active" data-lang="English">English</button>
+        <button class="language-btn" data-lang="Hindi">Hindi</button>
+      </div>
+      <div class="notice" id="languageNotice">English selected.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Owner dashboard -->
+<div class="modal" id="ownerModal">
+  <div class="modal-box">
+    <div class="modal-head"><h3>Owner Dashboard</h3><button class="close" data-close="ownerModal">X</button></div>
+    <div class="modal-body">
+      <div class="dashboard-grid">
+        <div class="dashboard-card"><b>Add Property</b><span>Create a property listing with title, price, location and photos.</span></div>
+        <div class="dashboard-card"><b>Edit Listing</b><span>Change price, title, description and property details.</span></div>
+        <div class="dashboard-card"><b>Manage Photos</b><span>Update property gallery images.</span></div>
+        <div class="dashboard-card"><b>Enquiries</b><span>View customer requests and booking messages.</span></div>
+      </div>
+      <div class="notice">This is a working front-end demo. Real owner accounts and database editing need a backend.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Services -->
+<div class="modal" id="servicesModal">
+  <div class="modal-box">
+    <div class="modal-head"><h3>All Services</h3><button class="close" data-close="servicesModal">X</button></div>
+    <div class="modal-body">
+      <div class="option-grid">
+        <div class="option" data-service="Hotel Booking"><b>Hotel Booking</b><br><small>Hotels, resorts, villas and cottages.</small></div>
+        <div class="option" data-service="Property Buying"><b>Property Buying</b><br><small>Homes, land and investment properties.</small></div>
+        <div class="option" data-service="Property Renting"><b>Property Renting</b><br><small>Rental homes, flats, offices and shops.</small></div>
+        <div class="option" data-service="Property Selling"><b>Property Selling</b><br><small>List and promote your property.</small></div>
+        <div class="option" data-service="Travel Booking"><b>Travel Booking</b><br><small>Bus, flight and train enquiry.</small></div>
+        <div class="option" data-service="Offers"><b>Offers &amp; Coupons</b><br><small>Seasonal deals and special packages.</small></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Dealers -->
+<div class="modal" id="dealersModal">
+  <div class="modal-box">
+    <div class="modal-head"><h3>All Dealers</h3><button class="close" data-close="dealersModal">X</button></div>
+    <div class="modal-body" id="dealerModalBody"></div>
+  </div>
+</div>
+
+<!-- Privacy / Terms / FAQ -->
+<div class="modal" id="privacyModal">
+  <div class="modal-box"><div class="modal-head"><h3>Privacy Policy</h3><button class="close" data-close="privacyModal">X</button></div><div class="modal-body"><p style="font-size:10px">Use customer information only for legitimate enquiries, bookings and support. Do not publish sensitive personal information on public property listings. Add your final legal/privacy text here before a live launch.</p></div></div>
+</div>
+
+<div class="modal" id="termsModal">
+  <div class="modal-box"><div class="modal-head"><h3>Terms &amp; Conditions</h3><button class="close" data-close="termsModal">X</button></div><div class="modal-body"><p style="font-size:10px">Property, hotel and travel information should be accurate and updated. Prices, availability, cancellation and refund rules should be shown before a real transaction. Add your final legal terms here.</p></div></div>
+</div>
+
+<div class="modal" id="faqModal">
+  <div class="modal-box"><div class="modal-head"><h3>FAQ</h3><button class="close" data-close="faqModal">X</button></div><div class="modal-body" id="faqBody"></div></div>
+</div>
+
+<script>
+/* ================= DATA ================= */
+const properties = [
+  {
+    id:1,type:"Hotel",title:"Luxury Villa in Goa",city:"Goa",price:"Rs. 55 Cr",
+    tag:"For Sale",image:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=88",
+    specs:["4 Bedrooms","4 Bathrooms","3200 Sq.Ft","1 Garage"],rating:"4.9/5",
+    desc:"A premium Goa villa concept with spacious rooms, private outdoor space, modern interiors and a holiday-friendly location."
+  },
+  {
+    id:2,type:"Property",title:"2 BHK Flat in Manali",city:"Manali",price:"Rs. 18,000 / Month",
+    tag:"For Rent",image:"https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1100&q=88",
+    specs:["2 Bedrooms","2 Bathrooms","1210 Sq.Ft","1 Parking"],rating:"4.7/5",
+    desc:"A cozy mountain-view style apartment suitable for long stays, holidays and work-from-hills living."
+  },
+  {
+    id:3,type:"Hotel",title:"Hotel Room in Mumbai",city:"Mumbai",price:"Rs. 3,500 / Night",
+    tag:"Hotel Room",image:"https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1100&q=88",
+    specs:["1 Guest","1 Room","Free WiFi","Breakfast"],rating:"4.6/5",
+    desc:"A modern hotel-room concept in Mumbai with comfortable interiors, Wi-Fi, breakfast and easy city access."
+  },
+  {
+    id:4,type:"Property",title:"Independent House in Dehradun",city:"Dehradun",price:"Rs. 2.8 Cr",
+    tag:"For Sale",image:"https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1100&q=88",
+    specs:["3 Bedrooms","3 Bathrooms","2000 Sq.Ft","2 Parking"],rating:"4.8/5",
+    desc:"A spacious independent-house concept in Dehradun with a calm residential feel and room for family living."
+  },
+  {
+    id:5,type:"Hotel",title:"Beach Resort Stay",city:"Goa",price:"Rs. 7,500 / Night",
+    tag:"Resort",image:"https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1100&q=88",
+    specs:["2 Guests","1 Suite","Pool","Breakfast"],rating:"4.8/5",
+    desc:"A resort-style stay with pool access, spacious rooms and a relaxed beach destination feel."
+  },
+  {
+    id:6,type:"Property",title:"Mountain Cottage",city:"Kashmir",price:"Rs. 22,000 / Month",
+    tag:"For Rent",image:"https://images.unsplash.com/photo-1605540436563-5bca919ae766?auto=format&fit=crop&w=1100&q=88",
+    specs:["2 Bedrooms","2 Baths","1400 Sq.Ft","Parking"],rating:"4.8/5",
+    desc:"A peaceful mountain cottage style property suited to scenic stays and extended rental plans."
+  },
+  {
+    id:7,type:"Hotel",title:"Backwater Resort",city:"Kerala",price:"Rs. 6,200 / Night",
+    tag:"Resort",image:"https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1100&q=88",
+    specs:["2 Guests","1 Suite","Lake View","Breakfast"],rating:"4.9/5",
+    desc:"A Kerala backwater inspired stay with calm surroundings, views and a resort experience."
+  },
+  {
+    id:8,type:"Property",title:"Royal Heritage Home",city:"Rajasthan",price:"Rs. 3.4 Cr",
+    tag:"For Sale",image:"https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1100&q=88",
+    specs:["4 Bedrooms","4 Baths","3500 Sq.Ft","2 Parking"],rating:"4.8/5",
+    desc:"A heritage-inspired property concept combining traditional architecture details with modern comfort."
+  }
+];
+
+const destinations = [
+  ["Goa","Sun, Sand & Endless Vibes","Beaches | Resorts | Villas","https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=86"],
+  ["Manali","Snowy Peaks & Peace","Hotels | Homestays | Cottages","https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=86"],
+  ["Shimla","Queen of Hills","Hotels | Resorts | Cottages","https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=900&q=86"],
+  ["Dehradun","Nature, Adventure & Calm","Hotels | Resorts | Villas","https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=86"],
+  ["Maharashtra","Culture, Coast & Heritage","Hotels | Resorts | Villas","https://images.unsplash.com/photo-1595658658481-d53d3f999875?auto=format&fit=crop&w=900&q=86"],
+  ["Mumbai","City of Dreams","Hotels | Apartments | PG","https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=900&q=86"],
+  ["Kerala","Backwaters & Beyond","Resorts | Houseboats | Villas","https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=86"],
+  ["Rajasthan","Royal Heritage & Culture","Hotels | Resorts | Palaces","https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=900&q=86"],
+  ["Kashmir","Paradise on Earth","Hotels | Houseboats | Cottages","https://images.unsplash.com/photo-1605540436563-5bca919ae766?auto=format&fit=crop&w=900&q=86"],
+  ["Uttarakhand","Mountains & Serenity","Hotels | Resorts | Villas","https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=86"],
+  ["Tamil Nadu","Temples & Tradition","Hotels | Resorts | Heritage","https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=900&q=86"],
+  ["Andaman & Nicobar","Crystal Clear Waters","Resorts | Villas | Beach Stays","https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=86"]
+];
+
+const services = [
+  ["HOTEL","Hotel Booking","Best hotels at best prices"],
+  ["HOME","Property Buying","Buy your dream home or investment property"],
+  ["RENT","Property Renting","Find the perfect rental space"],
+  ["SELL","Property Selling","List your property with us"],
+  ["TRAVEL","Travel Booking","Bus | Flight | Train tickets"],
+  ["DEAL","Offers & Coupons","Save more on your bookings"]
+];
+
+const dealers = [
+  ["RS","Ramesh","Lucknow","+91 98765 43210"],
+  ["NV","neha Verma","Lucknow","+91 87654 32109"],
+  ["AS","Amit Singh","Mumbai","+91 97654 21098"],
+  ["PY","Pooja Yadav","Jaipur","+91 66342 10897"],
+  ["SK","Sandeep Kumar","Bangalore","+91 64321 09876"],
+  ["AG","Anjali Gupta","Kolkata","+91 43210 98765"],
+  ["VT","Vikas Tiwari","Chandigarh","+91 32109 97654"],
+  ["SM","Simran Kaur","Pune","+91 21098 76543"]
+];
+
+const faqs = [
+  ["How do I search for a stay?","Enter a city or property name in the search box, choose dates if needed, and press SEARCH. Matching cards are shown and you can click a card for the full details."],
+  ["Can I open full property details?","Yes. Click any property card or destination card to open the full image, price, specifications, rating and description."],
+  ["Does the booking form work?","The front-end form validates and shows a success message. Real booking storage and payment require a backend/API connection."],
+  ["Can owners manage listings?","The Owner Dashboard button opens a working front-end dashboard interface. Secure accounts and database editing require a backend."],
+  ["Can I contact the business?","Yes. Use the phone or email links in the footer, or submit the enquiry form."]
+];
+
+/* ================= RENDER ================= */
+const propertyGrid = document.getElementById("propertyGrid");
+properties.forEach(p=>{
+  const card = document.createElement("article");
+  card.className = "property-card";
+  card.dataset.city = p.city.toLowerCase();
+  card.dataset.title = p.title.toLowerCase();
+  card.dataset.type = p.type.toLowerCase();
+  card.innerHTML = `
+    <div class="card-img" style="background-image:url('${p.image}')"><span class="badge">${p.tag}</span></div>
+    <div class="card-body">
+      <h3>${p.title}</h3>
+      <div class="loc">${p.city}</div>
+      <div class="specs">${p.specs.map(x=>`<span>${x}</span>`).join("")}</div>
+      <div class="price-row"><strong>${p.price}</strong><span class="arrow">-&gt;</span></div>
+    </div>`;
+  card.addEventListener("click",()=>openProperty(p));
+  propertyGrid.appendChild(card);
+});
+
+const destinationGrid = document.getElementById("destinationGrid");
+destinations.forEach((d,i)=>{
+  const [name,desc,tags,img]=d;
+  const card = document.createElement("article");
+  card.className="destination-card";
+  card.dataset.city=name.toLowerCase();
+  card.innerHTML=`
+    <div class="destination-img" style="background-image:url('${img}')"></div>
+    <div class="destination-body"><h3>${name}</h3><p>${desc}</p><small>${tags}</small></div>
+    <span class="arrow">-&gt;</span>`;
+  card.addEventListener("click",()=>openDestination(d));
+  destinationGrid.appendChild(card);
+});
+
+const serviceGrid=document.getElementById("serviceGrid");
+services.forEach(s=>{
+  const [icon,title,desc]=s;
+  const card=document.createElement("div");
+  card.className="service-card";
+  card.innerHTML=`<span class="service-icon">${icon}</span><div><h3>${title}</h3><p>${desc}</p></div>`;
+  card.addEventListener("click",()=>openService(title,desc));
+  serviceGrid.appendChild(card);
+});
+
+const dealerGrid=document.getElementById("dealerGrid");
+dealers.slice(0,6).forEach(d=>{
+  const [init,name,city,phone]=d;
+  const card=document.createElement("div");
+  card.className="dealer";
+  card.innerHTML=`<div class="dealer-row"><span class="avatar">${init}</span><div><div class="dealer-name">${name}</div><div class="dealer-place">${city}</div></div><span class="verified">VERIFIED</span></div><div class="dealer-phone">${phone}</div>`;
+  dealerGrid.appendChild(card);
+});
+
+function openProperty(p){
+  document.getElementById("detailBody").innerHTML=`
+    <div class="detail-layout">
+      <div class="detail-img" style="background-image:url('${p.image}')"></div>
+      <div class="detail-body">
+        <h4>${p.title}</h4>
+        <div class="detail-meta">${p.type} | ${p.city} | Rating ${p.rating}</div>
+        <div class="detail-specs">${p.specs.map(x=>`<div>${x}</div>`).join("")}</div>
+        <div class="detail-price">${p.price}</div>
+        <p class="detail-desc">${p.desc}</p>
+        <div class="modal-actions">
+          <button class="btn-green" onclick="startBooking('${p.title.replace(/'/g,"&#39;")}')">Book / Enquire</button>
+          <button class="btn-light" onclick="closeModal('detailModal'); document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact</button>
+        </div>
+      </div>
+    </div>`;
+  openModal("detailModal");
+}
+
+function openDestination(d){
+  const [name,desc,tags,img]=d;
+  document.getElementById("detailBody").innerHTML=`
+    <div class="detail-layout">
+      <div class="detail-img" style="background-image:url('${img}')"></div>
+      <div class="detail-body">
+        <h4>${name}</h4>
+        <div class="detail-meta">Popular Destination | ${tags}</div>
+        <div class="detail-specs"><div>Hotels and Resorts</div><div>Vacation Homes</div><div>Local Travel</div><div>Property Options</div></div>
+        <div class="detail-price">Explore ${name}</div>
+        <p class="detail-desc">${desc}. Search this destination above, open available property cards, or send a booking enquiry below.</p>
+        <div class="modal-actions">
+          <button class="btn-green" onclick="useDestination('${name.replace(/'/g,"&#39;")}')">Search ${name}</button>
+          <button class="btn-light" onclick="startBooking('${name.replace(/'/g,"&#39;")} Travel')">Send Enquiry</button>
+        </div>
+      </div>
+    </div>`;
+  openModal("detailModal");
+}
+
+function openService(title,desc){
+  document.getElementById("genericTitle").textContent=title;
+  document.getElementById("genericBody").innerHTML=`
+    <p style="font-size:10px;color:#5c6962;margin-bottom:12px">${desc}</p>
+    <div class="option-grid">
+      <div class="option" onclick="startBooking('${title.replace(/'/g,"&#39;")}')"><b>Start ${title}</b><br><small>Open the enquiry form.</small></div>
+      <div class="option" onclick="closeModal('genericModal'); document.getElementById('booking').scrollIntoView({behavior:'smooth'})"><b>Go to Booking Centre</b><br><small>Choose another service.</small></div>
+    </div>`;
+  openModal("genericModal");
+}
+
+/* ================= MODALS ================= */
+function openModal(id){
+  document.querySelectorAll(".modal.show").forEach(m=>m.classList.remove("show"));
+  const el=document.getElementById(id);
+  if(el){el.classList.add("show");document.body.classList.add("modal-open")}
+}
+function closeModal(id){
+  const el=document.getElementById(id);
+  if(el)el.classList.remove("show");
+  if(!document.querySelector(".modal.show")) document.body.classList.remove("modal-open");
+}
+document.querySelectorAll("[data-close]").forEach(btn=>btn.addEventListener("click",()=>closeModal(btn.dataset.close)));
+document.querySelectorAll(".modal").forEach(m=>{
+  m.addEventListener("click",e=>{if(e.target===m)closeModal(m.id)});
+});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){document.querySelectorAll(".modal.show").forEach(m=>closeModal(m.id))}});
+
+/* header buttons */
+document.querySelectorAll("[data-modal]").forEach(btn=>{
+  btn.addEventListener("click",e=>{
+    e.preventDefault();
+    openModal(btn.dataset.modal);
+  });
+});
+
+/* mobile nav */
+document.getElementById("mobileToggle").addEventListener("click",()=>{
+  document.getElementById("mobileNav").classList.toggle("show");
+});
+document.querySelectorAll("#mobileNav a").forEach(a=>a.addEventListener("click",()=>document.getElementById("mobileNav").classList.remove("show")));
+
+/* top search */
+document.getElementById("topSearch").addEventListener("click",()=>{
+  document.getElementById("searchShell").scrollIntoView({behavior:"smooth",block:"center"});
+  setTimeout(()=>document.getElementById("searchDestination").focus(),450);
+});
+
+/* search tabs */
+let searchType="hotel";
+document.querySelectorAll(".search-tab").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".search-tab").forEach(x=>x.classList.remove("active"));
+    btn.classList.add("active");
+    searchType=btn.dataset.type;
+    const dest=document.getElementById("searchDestination");
+    const map={hotel:"Where do you want to go?",property:"Property or city",bus:"From / To city",flight:"From / To city",train:"From / To city"};
+    dest.placeholder=map[searchType];
+  });
+});
+
+/* search */
+document.getElementById("searchForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const q=document.getElementById("searchDestination").value.trim().toLowerCase();
+  const result=document.getElementById("searchResult");
+  const cards=[...document.querySelectorAll(".property-card")];
+
+  if(searchType==="hotel" || searchType==="property"){
+    let count=0;
+    cards.forEach(card=>{
+      const match=!q || card.dataset.city.includes(q) || card.dataset.title.includes(q) || card.dataset.type.includes(searchType==="hotel"?"hotel":"property");
+      card.classList.toggle("hide",!match);
+      if(match) count++;
+    });
+    document.getElementById("properties").scrollIntoView({behavior:"smooth",block:"start"});
+    result.style.display="block";
+    result.textContent=count?`Search completed: ${count} matching result(s) found.`:"No exact match found. Try Goa, Manali, Mumbai, Dehradun, Kashmir, Kerala or Rajasthan.";
+  }else{
+    result.style.display="block";
+    result.textContent=`${searchType.toUpperCase()} enquiry selected. Scroll to the Booking Centre to send your travel request.`;
+    document.getElementById("bookingService").value=searchType==="bus"?"Bus Booking":searchType==="flight"?"Air Ticket":"Railway Ticket";
+    document.getElementById("booking").scrollIntoView({behavior:"smooth",block:"start"});
+  }
+});
+
+/* view all */
+document.getElementById("viewAllProperties").addEventListener("click",()=>{
+  document.querySelectorAll(".property-card").forEach(c=>c.classList.remove("hide"));
+  document.getElementById("properties").scrollIntoView({behavior:"smooth"});
+  document.getElementById("searchResult").style.display="block";
+  document.getElementById("searchResult").textContent=`Showing all ${properties.length} featured properties. Click any card for full details.`;
+});
+
+/* Services + dealers */
+document.getElementById("allServicesBtn").addEventListener("click",()=>openModal("servicesModal"));
+document.getElementById("allDealersBtn").addEventListener("click",()=>{
+  document.getElementById("dealerModalBody").innerHTML=dealers.map(d=>`
+    <div class="dealer" style="margin-bottom:7px">
+      <div class="dealer-row"><span class="avatar">${d[0]}</span><div><div class="dealer-name">${d[1]}</div><div class="dealer-place">${d[2]}</div></div><span class="verified">VERIFIED</span></div>
+      <div class="dealer-phone">${d[3]}</div>
+    </div>`).join("");
+  openModal("dealersModal");
+});
+
+/* Owner */
+document.getElementById("ownerDashboardBtn").addEventListener("click",()=>openModal("ownerModal"));
+
+/* Service modal option */
+document.querySelectorAll(".option[data-service]").forEach(opt=>opt.addEventListener("click",()=>{
+  startBooking(opt.dataset.service);
+}));
+
+/* Booking */
+document.querySelectorAll("[data-booking]").forEach(btn=>btn.addEventListener("click",()=>{
+  startBooking(btn.dataset.booking);
+}));
+function startBooking(service){
+  closeModal("detailModal");
+  closeModal("genericModal");
+  document.getElementById("bookingService").value=service.includes("Travel")?"Hotel Booking":service;
+  document.getElementById("booking").scrollIntoView({behavior:"smooth",block:"start"});
+  setTimeout(()=>document.querySelector('#bookingForm input[name="name"]').focus(),500);
+}
+window.startBooking=startBooking;
+window.closeModal=closeModal;
+
+document.getElementById("bookingForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  document.getElementById("bookingSuccess").style.display="block";
+  e.target.reset();
+  setTimeout(()=>document.getElementById("bookingSuccess").scrollIntoView({behavior:"smooth",block:"center"}),50);
+});
+
+document.getElementById("whatsappBtn").addEventListener("click",()=>{
+  const f=document.getElementById("bookingForm");
+  const name=f.querySelector('[name="name"]').value || "Customer";
+  const phone=f.querySelector('[name="phone"]').value || "";
+  const service=document.getElementById("bookingService").value;
+  const dest=f.querySelector('[name="destination"]').value || "";
+  const msg=`Hello RP Group & Hotels Industry.%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(service)}%0ADestination: ${encodeURIComponent(dest)}`;
+  window.open(`https://wa.me/919876543210?text=${msg}`,"_blank");
+});
+
+/* login */
+document.getElementById("loginForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  document.getElementById("loginSuccess").style.display="block";
+});
+
+/* language */
+document.querySelectorAll(".language-btn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".language-btn").forEach(x=>x.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById("languageNotice").textContent=`${btn.dataset.lang} selected. Full translation needs a multilingual content layer/backend.`;
+  });
+});
+
+/* FAQ */
+const faqBody=document.getElementById("faqBody");
+faqs.forEach((f)=>{
+  const item=document.createElement("div");
+  item.className="faq-item";
+  item.innerHTML=`<button>${f[0]}</button><div class="faq-answer">${f[1]}</div>`;
+  item.querySelector("button").addEventListener("click",()=>item.classList.toggle("open"));
+  faqBody.appendChild(item);
+});
+
+/* Destination search helper */
+function useDestination(name){
+  closeModal("detailModal");
+  document.getElementById("searchDestination").value=name;
+  document.querySelector('.search-tab[data-type="hotel"]').click();
+  document.getElementById("searchForm").requestSubmit();
+}
+window.useDestination=useDestination;
+
+/* Footer modal links */
+document.querySelectorAll('footer [data-modal]').forEach(a=>a.addEventListener("click",e=>{
+  e.preventDefault();openModal(a.dataset.modal);
+}));
+</script>
+
+</body>
+</html>

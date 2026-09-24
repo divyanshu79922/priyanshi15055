@@ -499,13 +499,13 @@ footer a,footer p{display:block;color:#fff;font-size:8px;margin:5px 0}
       <div class="form-grid">
         <div class="field"><label>Full Name<input required name="name" type="text" placeholder="Your name"></label></div>
         <div class="field"><label>Mobile Number<input required name="phone" type="tel" placeholder="+91"></label></div>
-        <div class="field"><label>Email<input required name="email" type="email" placeholder="you@example.com"></label></div>
+        <div class="field"><label>Email<input required name="email" type="email" placeholder="you@gmail.com"></label></div>
         <div class="field"><label>Service<select id="bookingService" name="service">
           <option>Hotel Booking</option><option>Property Buying</option><option>Property Renting</option>
           <option>Bus Booking</option><option>Air Ticket</option><option>Railway Ticket</option>
         </select></label></div>
         <div class="field"><label>Destination<input name="destination" type="text" placeholder="City / Location"></label></div>
-        <div class="field"><label>Travel Date<input name="date" type="date"></label></div>
+        <div class="field"><label>Date<input name="date" type="date"></label></div>
         <div class="field full"><label>Message<textarea name="message" rows="4" placeholder="Tell us what you are looking for..."></textarea></label></div>
       </div>
       <div class="form-actions">
@@ -982,7 +982,7 @@ document.getElementById("whatsappBtn").addEventListener("click",()=>{
   const service=document.getElementById("bookingService").value;
   const dest=f.querySelector('[name="destination"]').value || "";
   const msg=`Hello RP Group & Hotels Industry.%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(service)}%0ADestination: ${encodeURIComponent(dest)}`;
-  window.open(`https://wa.me/919876543210?text=${msg}`,"_blank");
+  window.open(`https://wa.me/+91 6387820753text=${msg}`,"_blank");
 });
 
 /* login */
